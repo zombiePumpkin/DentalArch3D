@@ -1,0 +1,24 @@
+@import './dist/scss/variables.scss';
+@import './dist/scss/flexbox.scss';
+@import url('https://fonts.googleapis.com/css2?family=Barlow:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  font-family: 'Barlow', sans-serif;
+  font-weight: 400;
+  font-size: 16px;
+  color: $txt__neutral;
+  box-sizing: border-box;
+}
+
+body, body #root {
+  @extend %flexbox__collumn;
+  @extend %flexbox__center-center;
+  width: 100vw;
+  height: 100vh;
+
+  code {
+    font-family: source-code-pro, Consolas, 'Courier New', monospace;
+  }
+}
