@@ -1,6 +1,20 @@
+# Dependencies
 node_modules
+
+# Generated folders
 build
+public
 coverage
+
+# Config files
+.gitignore
+.prettierignore
+.prettierrc.json
+package.json
+tsconfig.json
+
+# Generic files
+*.md
 .env
 *.lock
 *.log
