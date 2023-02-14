@@ -1,5 +1,4 @@
-@import './dist/scss/variables.scss';
-@import './dist/scss/flexbox.scss';
+@use './assets/scss/bootstrap.scss' as *;
 @import url('https://fonts.googleapis.com/css2?family=Barlow:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&display=swap');
 
 * {
@@ -13,8 +12,10 @@
 }
 
 body, body #root {
-  @extend %flexbox__collumn;
-  @extend %flexbox__center-center;
+  display: flex;
+  flex-flow: column nowrap;
+  align-items: flex-start;
+  justify-content: flex-start;
   width: 100vw;
   height: 100vh;
 

@@ -1,9 +1,14 @@
-import './index.scss'
-
+// Dependencies
 import React from 'react'
 import ReactDOM from 'react-dom/client'
-import App from './app/routes/App'
 
+// Components
+import App from 'app/routes/App'
+
+// Styles
+import 'styles.scss'
+
+// Exported component
 const root = ReactDOM.createRoot(document.getElementById('root') as HTMLElement)
 
 root.render(
