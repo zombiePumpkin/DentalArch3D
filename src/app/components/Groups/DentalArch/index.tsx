@@ -1,19 +1,29 @@
 // Components
-import { Model } from 'assets/3D/Teeth'
+import Teeth from 'assets/3D/Teeth'
 
 // Helpers
 import { angleToRadians } from 'helpers/converter'
 
 // Exported component
-export default function DentalArch() {
+const DentalArch = (): JSX.Element => {
   return (
-    <>
-      <Model 
-        scale={0.5}
-        position={[-0.5, 1, 0]}
-        rotation={[0, angleToRadians(90), 0]}
+    <group>
+      {/* Dental arch */}
+      <Teeth 
         castShadow
+        position={[.75, -1.6, 0.45]}
+        rotation={[angleToRadians(90), angleToRadians(20), angleToRadians(-95)]}
+        scale={1}
       />
-    </>
+
+      {/* Directional Light */}
+      <spotLight
+        castShadow
+        args={['#fff', 1.15, 8, angleToRadians(30), 0.4]}
+        position={[4, 0, 0]}
+      />
+    </group>
   )
 }
+
+export default DentalArch

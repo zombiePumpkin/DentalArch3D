@@ -6,7 +6,7 @@ import TextShape from 'app/components/Elements/TextShape'
 import { angleToRadians } from 'helpers/converter'
 
 // Exported component
-export default function IlluminatedSpheres():JSX.Element {
+const IlluminatedSpheres = (): JSX.Element => {
   return (
     <>
       {/* Spheres */}
@@ -41,3 +41,5 @@ export default function IlluminatedSpheres():JSX.Element {
     </>
   )
 }
+
+export default IlluminatedSpheres

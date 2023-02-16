@@ -4,20 +4,20 @@ import { Suspense } from 'react'
 // Three JS
 import { BackSide } from 'three'
 import { Canvas } from '@react-three/fiber'
-import { Environment, PerspectiveCamera, OrbitControls } from '@react-three/drei'
+import { Environment, OrbitControls, PerspectiveCamera } from '@react-three/drei'
 
 // Types 
 import { MeshChildren } from 'types/Mesh'
 
 // Exported component
-export default function ShadedCanvas({ children }: MeshChildren): JSX.Element {
+const ShadedCanvas = ({ children }: MeshChildren): JSX.Element => {
   return(
     // Canvas
     <Canvas>
       <Suspense fallback={null}>
         {/* Camera */}
-        <PerspectiveCamera makeDefault position={[-10, 8, 2]} />
-
+        <PerspectiveCamera makeDefault position={[4.25, 0, 0.75]} />
+        
         {/* Orbit controls */}
         <OrbitControls />
         
@@ -29,8 +29,8 @@ export default function ShadedCanvas({ children }: MeshChildren): JSX.Element {
 
         {/* Environment */}
         <Environment background>
-          <mesh scale={50}>
-            <sphereGeometry args={[1, 100, 100]} />
+          <mesh scale={5}>
+            <sphereGeometry args={[4, 16, 16]} />
             <meshBasicMaterial color='#bd8bc2' side={BackSide} />
           </mesh>
         </Environment>
@@ -38,3 +38,5 @@ export default function ShadedCanvas({ children }: MeshChildren): JSX.Element {
     </Canvas>
   )
 }
+
+export default ShadedCanvas
