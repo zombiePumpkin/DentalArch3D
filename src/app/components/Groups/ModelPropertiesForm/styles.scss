@@ -1,0 +1,50 @@
+.g-model-properties-form {
+  display: flex;
+  flex-flow: row wrap;
+  align-items: flex-start;
+  justify-content: flex-start;
+  width: 400px;
+  position: absolute;
+  right: 40px;
+  bottom: 40px;
+  border: 2px solid #f0dff2;
+  border-radius: 5px;
+  padding: 32px 24px;
+
+  &__title {
+    display: flex;
+    flex-flow: row nowrap;
+    align-items: center;
+    justify-content: flex-start;
+    width: 100%;
+    margin-bottom: 24px;
+    font-size: 20px;
+    color: #fff;
+    text-transform: uppercase;
+  }
+
+  &__subtitle {
+    display: flex;
+    flex-flow: row nowrap;
+    align-items: center;
+    justify-content: flex-start;
+    width: 100%;
+    margin-bottom: 16px;
+    font-size: 18px;
+    color: #fff;
+    text-transform: uppercase;
+  }
+
+  &__content {
+    display: flex;
+    flex-flow: column nowrap;
+    align-items: flex-start;
+    justify-content: flex-start;
+    width: 100%;
+    margin-bottom: 24px;
+
+    &:last-of-type {
+      margin-bottom: 0;
+    } 
+  }
+}
