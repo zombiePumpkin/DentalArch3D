@@ -1,4 +1,8 @@
 // Dependencies
+import { forwardRef } from 'react'
+
+// Three JS
+import { Group } from 'three'
 import { useGLTF } from '@react-three/drei'
 
 // Components
@@ -9,11 +13,10 @@ import InferiorJaw from './InferiorJaw'
 import InferiorGum from './InferiorGum'
 import InferiorArch from './InferiorArch'
 
-
 // Exported component
-const Teeth = (props) => {
+const Teeth = forwardRef((props: any, ref: React.Ref<Group>) => {
   return (
-    <group {...props} dispose={null}>
+    <group {...props} dispose={null} ref={ref}>
       {/* Mandibula superior */}
       <SuperiorJaw />
       {/* Gengiva superior */}
@@ -28,7 +31,7 @@ const Teeth = (props) => {
       <InferiorArch />
     </group>
   )
-}
+})
 
 useGLTF.preload('/models/teeth/teeth.glb')
 
