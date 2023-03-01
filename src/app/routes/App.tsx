@@ -1,15 +1,15 @@
 // Dependencies
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom'
 
-// Components
-import Home from 'app/pages/Home'
+// Pages
+import HomePage from 'app/pages/HomePage'
 
 // Exported components
 const App = (): JSX.Element => {
   return (
     <Router>
       <Routes>
-        <Route path='/' element={<Home />} />
+        <Route path='/' element={<HomePage />} />
       </Routes>
     </Router>
   )
