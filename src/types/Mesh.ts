@@ -1,3 +1,1 @@
-export type MeshChildren = {
-  children: JSX.Element[] | JSX.Element
-}
+export type MeshChildren = { children: JSX.Element[] | JSX.Element }
