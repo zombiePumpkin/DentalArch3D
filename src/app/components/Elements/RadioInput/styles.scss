@@ -1,0 +1,56 @@
+.e-radio-input {
+  display: flex;
+  flex-flow: row nowrap;
+  align-items: center;
+  justify-content: flex-start;
+  width: 100%;
+  margin-bottom: 8px;
+
+  &__input {
+    display: none;
+  }
+
+  &__label {
+    cursor: pointer;
+    position: relative;
+    display: flex;
+    flex-flow: row nowrap;
+    align-items: center;
+    justify-content: flex-start;
+    padding-left: 24px; 
+    font-size: 18px;
+    color: #fff;
+  }
+
+  &__input + &__label {
+    &::before {
+      position: absolute;
+      left: 0;
+      top: calc(50% - 8px);
+      content: ' ';
+      display: flex;
+      width: 16px;
+      height: 16px;
+      border-radius: 50%;
+      background-color: #f0dff2;
+    }
+
+    &::after {
+      position: absolute;
+      left: 4px;
+      top: calc(50% - 4px);
+      content: ' ';
+      display: flex;
+      width: 8px;
+      height: 8px;
+      border-radius: 50%;
+      background-color: #d4d4d4;
+    }
+  }
+
+  &__input:checked + &__label {
+    &::after {
+      background-color: #bd8bc2;
+    }
+  }
+}
