@@ -14,12 +14,12 @@ import './styles.scss'
 
 // Exported component
 const HomeLayout = (): JSX.Element => {
-  const { model: { mouthSide } } = useContext(ModelContext)
+  const { model: { mouthSide, isMouthOpen } } = useContext(ModelContext)
 
   return (
     <div className="l-home">
       <ShadedCanvas>
-        <DentalArch side={mouthSide}/>
+        <DentalArch side={mouthSide} isOpen={isMouthOpen} />
       </ShadedCanvas>
       
       <ModelPropertiesForm />
